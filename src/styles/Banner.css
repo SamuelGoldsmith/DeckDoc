@@ -1,0 +1,92 @@
+/* General styling for banner and nav */
+.banner {
+    display: flex;
+    height: auto * 2;
+    width: 90%;
+    background-image: url("../images/banner.jpg");
+    background-size: cover; 
+    background-position: center;
+}
+
+.row2{
+    display: flex;
+}
+.userBox{
+
+    width: 10%;
+    background-color: rgb(4, 4, 4, .25);
+   border: 3px solid darkgrey;
+}
+.nav {
+    display: flex; /* Use flexbox for layout */
+    justify-content: flex-start; /* Space buttons evenly across the nav */
+    align-items: center; /* Vertically center the buttons/text */
+    background-color: rgba(4, 4, 4, .25); /* Semi-transparent background */
+    width: 100%;
+    padding: 10px 0; /* Add padding for better spacing */
+}
+.nav h3 {
+    margin: 0 15px; /* Add some spacing between each link */
+    padding: 5px 10px;
+    text-transform: uppercase; /* Make text uppercase for uniformity */
+    color: black;
+    background-color: transparent; /* Remove background color */
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 16px; /* Control the size */
+    border-bottom: 3px solid transparent; /* Add a border for hover effect */
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
+}
+.nav h3:first-child {
+    margin-left: auto; /* Push all h3 elements to the far right */
+}
+.nav h3:hover {
+    border-bottom: 3px solid black; /* Add an underline effect on hover */
+    transform: scale(1.15); /* Slightly scale up the text */
+}
+
+
+    
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+    .banner {
+        height: 25vh; /* Decrease banner height for mobile */
+        width: 100%; /* Make the banner full width on mobile */
+    }
+
+    .row2{
+        display: flex;
+    }
+
+    .nav {
+        flex-direction: column; /* Stack buttons vertically on mobile */
+        height: auto; /* Adjust height to fit content */
+        background-position:center;
+    }
+
+    .nav h3 {
+        width: 80%; /* Make buttons wider on mobile */
+        height: 40px; /* Adjust button height */
+        margin: 10px 0; /* Add margin between buttons */
+    }
+}
+
+/* Even smaller screens */
+@media (max-width: 480px) {
+    .banner {
+        height: 20vh; /* Further decrease banner height */
+        width: 85%; /* Ensure full width */
+    }
+    .userBox{
+        width: 15%
+    }
+    .row2{
+        display: flex;
+    }
+
+    .nav h3 {
+        width: 90%; /* Make buttons take almost the entire width */
+        height: 35px;
+        margin: 5px 0;
+    }
+}
